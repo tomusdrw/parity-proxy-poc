@@ -13,6 +13,11 @@ app.use((req, res, next) => {
   getStatic(host)(req, res, next);
 });
 
+app.use(ecstatic({
+  root: `${__dirname}/dapps`,
+  showDir: true,
+}));
+
 const cache = {};
 function getStatic (host) {
   if (!cache[host]) {
