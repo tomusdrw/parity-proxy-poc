@@ -10,6 +10,10 @@ app.use(morgan('combined'));
 
 app.use((req, res, next) => {
   const host = req.headers.host;
+  if (host.indexOf('my.parity') !== -1) {
+    return getStatic('my.parity')(req, res, next);
+  }
+
   getStatic(host)(req, res, next);
 });
 
