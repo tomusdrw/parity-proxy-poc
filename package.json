@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ecstatic": "^1.4.0",
+    "ecstatic": "^2.2.1",
     "express": "^4.13.4",
     "http-proxy": "^1.13.2",
     "morgan": "^1.7.0"
